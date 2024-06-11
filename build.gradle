@@ -1,0 +1,20 @@
+plugins {
+    id 'java'
+    id 'application'
+    id "com.github.johnrengelman.shadow" version "7.1.2"
+}
+mainClassName = 'org.installer.InstallerGUI'
+group = 'org.installer'
+version = '1.0'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+    // JSON-P
+    implementation 'javax.json:javax.json-api:1.1.4'
+    implementation 'org.glassfish:javax.json:1.1.4'
+    implementation 'com.formdev:flatlaf:3.0'
+}
