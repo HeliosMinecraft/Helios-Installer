@@ -57,7 +57,7 @@ public class InstallerGUI extends JFrame
         this.add( profileLabel );
 
         releaseDropdown = new JComboBox<>();
-        releaseDropdown.setBounds( WIDTH/2 - 75, 30, 150, 30 );
+        releaseDropdown.setBounds( WIDTH/2 - 125, 30, 225, 30 );
         releaseDropdown.setOpaque(false);
         try{
             populateReleases();
@@ -107,6 +107,10 @@ public class InstallerGUI extends JFrame
         installButton.addActionListener(e -> {
             String selectedRelease = (String) releaseDropdown.getSelectedItem();
 
+            if(selectedRelease == null)return;
+
+            selectedRelease = selectedRelease.substring(0,selectedRelease.lastIndexOf(" /"));
+
             if(destination == null){
                 JOptionPane.showMessageDialog(this,"Destination folder is not selected!");
             }else {
@@ -144,7 +148,8 @@ public class InstallerGUI extends JFrame
 
         for (JsonObject release : releases.getValuesAs(JsonObject.class)) {
             String tagName = release.getString("tag_name");
-            releaseDropdown.addItem(tagName);
+            //Append tag name as well for ease
+            releaseDropdown.addItem(tagName + " / (" + release.getString("name") + ")" );
         }
 
         reader.close();
