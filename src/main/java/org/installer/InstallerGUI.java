@@ -20,6 +20,7 @@ public class InstallerGUI extends JFrame
     private static final Dimension SCREEN_SIZE = Toolkit.getDefaultToolkit().getScreenSize();
     private static final int HEIGHT = 325, WIDTH = 600;
     private static final Font FONT = new Font( "Roboto", 0, 15 );
+    //Change this string to your repo and it should fetch releases from it.
     private static final String repo = "HeliosMinecraft/HeliosClient";
     private JComboBox<String> releaseDropdown;
     private static Image fullLogoImage = null;
@@ -86,6 +87,7 @@ public class InstallerGUI extends JFrame
                 destination = fileChooser.getSelectedFile();
                 if(destination != null) {
                     JOptionPane.showMessageDialog(this, "Destination file selected.");
+                    destinationButton.setText(destination.getAbsolutePath());
                 }
             }
         });
