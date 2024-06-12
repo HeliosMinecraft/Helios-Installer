@@ -121,8 +121,8 @@ public class InstallerGUI extends JFrame
                     downloadAndInstall(selectedRelease, destination, bar);
                     JOptionPane.showMessageDialog(this, "HeliosClient has been successfully installed. Enjoy :)");
                 } catch (IOException ex) {
-                    JOptionPane.showMessageDialog(this, "Error while downloading heliosclient :(");
                     ex.printStackTrace();
+                    JOptionPane.showMessageDialog(this, "Error while downloading heliosclient :( \n Error Message: "+ ex.getMessage());
                 }
             }
         });
