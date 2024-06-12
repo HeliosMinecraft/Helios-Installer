@@ -132,7 +132,7 @@ public class InstallerGUI extends JFrame
         this.add(installButton);
 
         JLabel imageHolder = new JLabel(new ImageIcon(fullLogoImage.getScaledInstance(200,100,2)));
-        imageHolder.setBounds(WIDTH/2 - 125, 160, 200, 100);
+        imageHolder.setBounds(WIDTH/2 - 105, 160, 210, 100);
         this.add(imageHolder);
 
         // Set the frame to visible
