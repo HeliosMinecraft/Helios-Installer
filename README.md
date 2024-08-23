@@ -33,5 +33,5 @@ as well as a progress bar displaying the download progress
 
 
 # Issues
-If you find any bugs or issues then you can find support on our discord server. 
+If you find any bugs or issues then you can find support on our [discord server](https://discord.gg/x8wvcqP2Tk) or create an [issue](https://github.com/HeliosMinecraft/Helios-installer/issues). 
 Remember, this installer may not support all systems!
